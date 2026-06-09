@@ -1,0 +1,516 @@
+.services {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.services .background {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.services .bg_wrapper {
+  position: relative;
+  transform: skewY(345deg) translateY(-200px);
+  animation: animateColor 10s linear 0s infinite forwards;
+}
+
+@keyframes animateColor {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+.services .bg_wrapper .dummy_text {
+  position: relative;
+  width: 100%;
+  font-size: 8em;
+  color: white;
+  pointer-events: none;
+  user-select: none;
+  line-height: 0.5em;
+  white-space: nowrap;
+  transform: translateX(calc(0% - var(--x) * 1px));
+}
+
+.services .bg_wrapper .dummy_text:nth-child(even) {
+  transform: translateX(calc(-200vw - var(--x) * -1px));
+}
+
+.services .bg_wrapper .dummy_text span {
+  color: rgb(219, 225, 228);
+  margin: 0 10px;
+}
+
+.services .bg_wrapper .dummy_text span:nth-child(even) {
+  color: transparent;
+  -webkit-text-stroke: 1px #fff;
+}
+
+.services .capabilities {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.services .capabilities img {
+  max-width: 100%;
+  width: 60%;
+}
+
+.services .capabilities.move-little-down {
+  margin-top: 150px;
+}
+
+.services .capabilities .c_content {
+  width: 400px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  border-top: 3px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 3px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  padding: 50px;
+  padding-left: 100px;
+  color: #fff;
+  font-size: 20px;
+}
+
+.services .capabilities.left .c_content {
+  transform: translateX(-150px);
+}
+
+.services .capabilities.left .c_content .c_title {
+  position: absolute;
+  top: -15%;
+  right: -45%;
+  font-size: 2.5em;
+  font-weight: bolder;
+  width: 600px;
+  -webkit-text-stroke: 2px #e08383;
+}
+
+.services .capabilities.right .c_content .c_title {
+  position: absolute;
+  top: -20%;
+  left: -20%;
+  font-size: 2.5em;
+  font-weight: bolder;
+  width: 600px;
+  -webkit-text-stroke: 2px #e08383;
+}
+
+.services .capabilities.right .c_content {
+  transform: translateX(150px);
+}
+
+.services .capabilities .c_content a {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  font-size: 25px;
+  padding: 7px 15px;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: 0.5s linear;
+}
+
+.services .capabilities .c_content a:hover {
+  color: rgb(44, 193, 183);
+}
+
+.services .capabilities .c_content .fa-arrow-alt-circle-right {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  font-size: 25px;
+  padding: 7px 0;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition-delay: 0s;
+}
+
+.services .capabilities .c_content a:hover ~ .fa-arrow-alt-circle-right {
+  color: dodgerblue;
+  transition-delay: 0.5s;
+  transform: translateX(25px);
+}
+
+.services .foot {
+  position: relative;
+  z-index: 2;
+}
+
+.services .foot h2 {
+  text-align: center;
+  width: 100%;
+  height: 300px;
+  line-height: 300px;
+  font-size: 5em;
+  background: url("../img/elements/border.png") no-repeat center center;
+  -webkit-text-stroke: 1px aqua;
+}
+
+.services .foot .foot-link {
+  margin: 15px 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 20px;
+  background: rgba(95, 158, 160, 0.26);
+  z-index: 2;
+  backdrop-filter: blur(5px);
+}
+
+.services .foot a {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 4em;
+  text-align: center;
+  color: rgb(21, 19, 19);
+  padding: 20px 0;
+  transition: 0.3s linear;
+}
+
+.services .foot a:hover {
+  color: dodgerblue;
+}
+
+.services .foot .fa-arrow-alt-circle-right {
+  display: inline-block;
+  text-decoration: none;
+  color: rgb(12, 12, 12);
+  font-size: 50px;
+  padding: 7px 20px;
+  width: 50px;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition-delay: 0.5s;
+}
+
+.services .foot a:hover ~ .fa-arrow-alt-circle-right {
+  color: dodgerblue;
+  transition-delay: 0.5s;
+  transform: translateX(50px);
+}
+
+.services .foot a i {
+  transition: 0.5s;
+}
+
+.services .foot a:hover i {
+  transform: translateX(50px);
+}
+
+.services .foot .foot-link img {
+  position: absolute;
+  opacity: 0;
+  width: 400px;
+  height: 300px;
+  top: calc(var(--img_top) - 150px);
+  left: calc(var(--img_left) - 200px);
+  transform: scale(0);
+  user-select: none;
+  z-index: -1;
+  pointer-events: none;
+  transition:
+    opacity 0.3s ease-in-out,
+    transform 1s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.services .foot .foot-link:hover img {
+  transition-delay: 0.7s;
+  opacity: 0.8;
+  top: calc(var(--img_top) - 150px);
+  left: calc(var(--img_left) - 200px);
+  transform: scale(1);
+}
+
+.services a {
+  position: relative;
+  overflow: hidden;
+}
+
+.services a .jump-target {
+  position: relative;
+}
+
+.services a .jumped {
+  position: relative;
+  top: 0;
+  transition: 0.15s;
+  transition-delay: calc(var(--come) * 0.05s);
+}
+
+.services a:hover .jumped {
+  top: -2ch;
+}
+
+.services a .jumping {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(2ch);
+  transition: 0.15s;
+  transition-delay: calc(var(--come) * 0.05s);
+}
+
+.services a:hover .jumping {
+  transform: translateY(0ch);
+}
+
+.services .hero {
+  position: relative;
+  z-index: 2;
+}
+.typography {
+  position: relative;
+  font-size: 6rem;
+  display: inline-block;
+  font-weight: bold;
+}
+
+.t_dummy {
+  display: inline-block;
+}
+
+.t-box {
+  position: relative;
+  width: 450px;
+  font-size: 60px;
+  height: 50px;
+  line-height: 70px;
+  display: inline-block;
+  transform-style: preserve-3d;
+  animation: rotate 10s linear 0s infinite forwards;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate3d(0, 0, 0, 0);
+  }
+
+  3%,
+  25% {
+    transform: rotate3d(1, 0, 0, 90deg);
+  }
+
+  28%,
+  50% {
+    transform: rotate3d(1, 0, 0, 180deg);
+  }
+
+  53%,
+  75% {
+    transform: rotate3d(1, 0, 0, 270deg);
+  }
+
+  78%,
+  100% {
+    transform: rotate3d(1, 0, 0, 360deg);
+  }
+}
+
+.services .box-side {
+  position: absolute;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 25px;
+  margin-left: 15px;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 80%;
+  line-height: 35px;
+  display: inline-block;
+  background: #0d1117;
+}
+
+.services .box-front {
+  background: rgb(155, 12, 146);
+  transform: translate3d(0, 0, 25px);
+}
+
+.services .box-back {
+  background: rgb(109, 8, 149);
+  transform: translate3d(0, 0, -25px) rotateX(180deg);
+}
+
+.services .box-top {
+  background: rgb(28, 143, 149);
+  transform: translate3d(0, 25px, 0) rotateX(-90deg);
+}
+
+.services .box-bottom {
+  background: rgb(98, 148, 219);
+  transform: translate3d(0, -25px, 0) rotateX(90deg);
+}
+
+.services .hero .hero-text {
+  position: relative;
+  text-align: justify;
+  align-items: left;
+  margin-top: 170px;
+  max-width: 681px;
+  min-height: 60px;
+  float: right;
+  padding: 1%;
+  font-size: 18px;
+  margin-right: 30px;
+  background: rgba(255, 255, 255, 0.144);
+  backdrop-filter: blur(5px);
+  border-radius: 20px;
+  border-top: 2px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.services .capabilities.move-little-down {
+  margin-top: 100px;
+  width: 1100px;
+}
+
+@media (max-width: 681px) {
+  .services .capabilities.left .c_content .c_title {
+    right: -20%;
+  }
+
+  .services .capabilities.right .c_content .c_title {
+    left: -50%;
+  }
+
+  .services .capabilities .c_content {
+    padding: 10px;
+    font-size: 30px;
+    width: fit-content;
+    text-align: justify;
+  }
+}
+
+@media (max-width: 681px) {
+  .services .capabilities {
+    flex-direction: column;
+  }
+  .services .capabilities img {
+    width: 100%;
+  }
+  .services .capabilities.left .c_content,
+  .services .capabilities.right .c_content {
+    transform: translateX(0);
+  }
+
+  .services .capabilities.right {
+    flex-direction: column-reverse;
+  }
+
+  .services .capabilities.left .c_content .c_title {
+    position: absolute;
+    top: 50%;
+    right: -50%;
+    font-size: 3.5em;
+    font-weight: bolder;
+    width: 500px;
+    transform: rotateZ(90deg) translateY(-100%);
+  }
+  .services .capabilities.right .c_content .c_title {
+    position: absolute;
+    top: 50%;
+    left: -50%;
+    font-size: 3.5em;
+    font-weight: bolder;
+    width: 500px;
+    transform: rotateZ(90deg) translateY(100%);
+  }
+
+  .services a .jumping {
+    display: none;
+  }
+
+  .services a:hover .jumped {
+    top: 0;
+  }
+
+  .services .foot a {
+    font-size: 2em;
+  }
+
+  .hero .hero-text {
+    float: left;
+    color: aqua;
+    display: block;
+  }
+}
+
+@media (max-width: 450px) {
+  .t-box {
+    width: 100%;
+    font-size: 35px;
+    height: 45px;
+  }
+
+  .services .box-front {
+    transform: translate3d(0, 0, 22.5px);
+  }
+
+  .services .box-back {
+    transform: translate3d(0, 0, -22.5px) rotateX(180deg);
+  }
+
+  .services .box-top {
+    transform: translate3d(0, 22.5px, 0) rotateX(-90deg);
+  }
+
+  .services .box-bottom {
+    transform: translate3d(0, -22.5px, 0) rotateX(90deg);
+  }
+}
+
+@media (max-width: 400px) {
+  .services .capabilities .c_content {
+    width: 90%;
+  }
+
+  .services .capabilities .c_content .c_title {
+    display: none;
+  }
+
+  .services .foot a:hover ~ .fa-arrow-alt-circle-right {
+    color: dodgerblue;
+    transition-delay: 0.5s;
+    transform: translateX(0);
+  }
+
+  .services .capabilities.move-little-down {
+    margin-top: 300px;
+  }
+
+  .services .foot h2 {
+    text-align: center;
+    width: 100%;
+    height: 300px;
+    line-height: 300px;
+    font-size: 3em;
+    background: url("../img/elements/border.png") no-repeat center center;
+    -webkit-text-stroke: 1px aqua;
+  }
+}
+
+@media (max-height: 778px) {
+  .services .foot {
+    width: 100%;
+    min-height: 200vh;
+  }
+}
