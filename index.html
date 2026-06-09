@@ -1,0 +1,1366 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta name="keywords" content="Document" />
+        <meta name="description" content="Your Description..." />
+        <title>Portfolio</title>
+        <link
+            rel="stylesheet"
+            href="resources/swiper js/swiper-bundle.min.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        />
+        <link rel="stylesheet" href="resources/css/loader.css" />
+        <link rel="stylesheet" href="resources/css/hamburger.css" />
+        <link rel="stylesheet" href="resources/css/home.css" />
+        <link rel="stylesheet" href="resources/css/about.css" />
+        <link rel="stylesheet" href="resources/css/services.css">
+        <link rel="stylesheet" href="resources/css/portfolio.css" />
+        <link rel="stylesheet" href="resources/css/blog.css" />
+        <link rel="stylesheet" href="resources/css/contact.css" />
+        <link href="resources/mapbox-gl/mapbox-gl.css" rel="stylesheet" />
+        <link rel="stylesheet" href="resources/css/style.css" />
+        <link
+            rel="shortcut icon"
+            href="resources/img/home.png"
+            type="image/x-icon"
+        />
+    </head>
+    <body onload="loaded()">
+        <div class="loader">
+            <div class="c c1"></div>
+            <div class="c c2"></div>
+            <div class="c c3"></div>
+            <div class="c c4"></div>
+            <div class="c c5"></div>
+            <div class="c c6"></div>
+        </div>
+        <script>
+            let loader = document.querySelector(".loader");
+            function loaded() {
+                loader.classList.add("remove");
+                setTimeout(() => {
+                    loader.style.display = "none";
+                }, 1000);
+            }
+        </script>
+
+        <div class="hamburger">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+
+        <nav class="navigation">
+            <h1>
+                Angu Ishwarya S
+                <div></div>
+                <div></div>
+            </h1>
+            <ul>
+                <li><a href="#" onclick="home()">home</a></li>
+                <li>
+                    <a
+                        href="#"
+                        onclick="about(); animate3.play(); animate4.play();"
+                        >about</a
+                    >
+                </li>
+                <li><a href="#" onclick="services(); animate6.play();">services</a></li>
+                <li><a href="#" onclick="portfolio()">portfolio</a></li>
+                <li><a href="#" onclick="blog()">Certifications</a></li>
+                <li>
+                    <a href="#" onclick="contact(); animate5.play()">contact</a>
+                </li>
+            </ul>
+            <p style="color: rgb(235, 227, 227);">&copy; 2025 Angu Ishwarya S</p>
+        </nav>
+
+        <div class="container">
+            <div class="layer layer1 active">
+                <div class="home main">
+                    <div class="canvas_container">
+                        <canvas></canvas>
+                    </div>
+                    <div class="content-for-home">
+                        <div class="img-container"></div>
+                        <h1 align="center">Angu Ishwarya S</h1>
+                        <div class="social-icons">
+                          
+                            <div class="s-icon">
+                                <a href="https://github.com/Anguishwarya">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <div class="s-name">GitHub</div>
+                            </div>
+                        
+                            <div class="s-icon">
+                                <a href="https://neocities.org/site/ishwarya-2630">
+                                    <i class="fas fa-globe"></i>
+                                </a>
+                                <div class="s-name">Website</div>
+                            </div>
+                            <div class="s-icon">
+                                <a href="mailto:ishwaryax7@gmail.com">
+                                    <i class="fas fa-envelope"></i>
+                                </a>
+                                <div class="s-name">Email</div>
+                            </div>
+                             <div class="s-icon">
+                                <a href="https://www.behance.net/anguishwarya">
+                                    <i class="fa-brands fa-behance"></i>
+                                </a>
+                                <div class="s-name">Behance</div>
+                            </div>
+                            </div>
+
+                        <div class="side-nav">
+                            <button
+                                onclick="about(); animate3.play(); animate4.play();"
+                            >
+                                <span class="w">W</span>
+                                <span class="tooltip"> why you? </span>
+                            </button>
+                            <button onclick="services(); animate6.play();">
+                                <span class="w">W</span>
+                                <span class="tooltip"> what do you do? </span>
+                            </button>
+                            <button onclick="portfolio()">
+                                <span class="w">W</span>
+                                <span class="tooltip">
+                                    what have you done?
+                                </span>
+                            </button>
+                            <button onclick="blog()">
+                                <span class="w">W</span>
+                                <span class="tooltip"> what did you get? </span>
+                            </button>
+                            <button onclick="contact(); animate5.play()">
+                                <span class="w">W</span>
+                                <span class="tooltip"> where are you? </span>
+                            </button>
+                        </div>
+
+                        <div class="titles-for-side-nav">
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="layer layer2">
+                <div class="about main">
+                    <div class="styling">
+                        <div class="absolute box"></div>
+                        <div class="absolute circle"></div>
+                        <div class="absolute triangle"></div>
+                        <div class="absolute dots">
+                            <div class="dot dot1"></div>
+                            <div class="dot dot2"></div>
+                            <div class="dot dot3"></div>
+                            <div class="dot dot4"></div>
+                            <div class="dot dot5"></div>
+                            <div class="dot dot6"></div>
+                            <div class="dot dot7"></div>
+                            <div class="dot dot8"></div>
+                            <div class="dot dot9"></div>
+                            <div class="dot dot10"></div>
+                            <div class="dot dot11"></div>
+                            <div class="dot dot12"></div>
+                            <div class="dot dot13"></div>
+                            <div class="dot dot14"></div>
+                            <div class="dot dot15"></div>
+                            <div class="dot dot16"></div>
+                            <div class="dot dot17"></div>
+                            <div class="dot dot18"></div>
+                            <div class="dot dot19"></div>
+                            <div class="dot dot20"></div>
+                            <div class="dot dot21"></div>
+                            <div class="dot dot22"></div>
+                            <div class="dot dot23"></div>
+                            <div class="dot dot24"></div>
+                        </div>
+
+                        <svg
+                            class="wave absolute"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 1450 320"
+                        >
+                            <path
+                                fill-opacity="1"
+                                d="M0,320L48,277.3C96,235,192,149,288,122.7C384,96,480,128,576,165.3C672,203,768,245,864,234.7C960,224,1056,160,1152,112C1248,64,1344,32,1392,16L1440,0L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+                            ></path>
+                        </svg>
+
+                        <svg
+                            class="wave absolute opposite"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 1450 320"
+                        >
+                            <path
+                                fill-opacity="1"
+                                d="M0,224L48,213.3C96,203,192,181,288,192C384,203,480,245,576,218.7C672,192,768,96,864,64C960,32,1056,64,1152,101.3C1248,139,1344,181,1392,202.7L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+                            ></path>
+                        </svg>
+                    </div>
+
+                    <div class="wrapper">
+                        <div class="face face1">
+                            <div class="content">
+                                <p>Hello,</p>
+                                <h1>I'm Angu Ishwarya S</h1>
+                                <p class="text">
+                                    UI/UX Designer with 1 year of experience in creating intuitive 
+                                    and visually engaging digital experiences. Skilled in user-centered 
+                                    design, frontend development, and content writing. Passionate about 
+                                    combining design, technology, and storytelling to build meaningful 
+                                    and user-friendly products, while leveraging AI tools to enhance 
+                                    creativity and efficiency.
+
+                                </p>
+                                <a
+                                    class="button download"
+                                    href="resources/img/bg1.png"
+                                    download="ishwarya_cv"
+                                    >Download CV</a
+                                >
+                                <a
+                                    class="button hire"
+                                    href="#"
+                                    class="hire"
+                                    onclick="contact(); animate5.play()"
+                                    >Hire Me.</a
+                                >
+                            </div>
+                        </div>
+                        <div class="face face2"></div>
+                    </div>
+
+                    <nav class="about_nav">
+                        <ul>
+                            <li>
+                                <a class="active" href="#" data-text="one"
+                                    >Skills</a
+                                >
+                            </li>
+                            <li>
+                                <a href="#" data-text="two">Experience</a>
+                            </li>
+                            <li>
+                                <a href="#" data-text="three">Education</a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <div class="about_container">
+                    
+                        <div class="skills">
+                            <div class="skill">
+                                <div class="name">HTML5</div>
+                                <div class="value" style="left: 85%">85%</div>
+                                <div class="percent">
+                                    <div
+                                        class="progress"
+                                        style="width: 85%"
+                                    ></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <div class="name">CSS</div>
+                                <div class="value" style="left: 80%">80%</div>
+                                <div class="percent">
+                                    <div
+                                        class="progress"
+                                        style="width: 80%"
+                                    ></div>
+                                </div>
+                            </div>
+                             <div class="skill">
+                                <div class="name">Java Script</div>
+                                <div class="value" style="left: 70%">70%</div>
+                                <div class="percent">
+                                    <div
+                                        class="progress"
+                                        style="width: 70%"
+                                    ></div>
+                                </div>
+                            </div>
+                             <div class="skill">
+                                <div class="name">Content Writing</div>
+                                <div class="value" style="left: 75%">75%</div>
+                                <div class="percent">
+                                    <div
+                                        class="progress"
+                                        style="width: 75%"
+                                    ></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill">
+                                <div class="name">Python</div>
+                                <div class="value" style="left: 80%">80%</div>
+                                <div class="percent">
+                                    <div
+                                        class="progress"
+                                        style="width: 80%"
+                                    ></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill">
+                                <div class="name">Github</div>
+                                <div class="value" style="left: 70%">70%</div>
+                                <div class="percent">
+                                    <div
+                                        class="progress"
+                                        style="width: 75%"
+                                    ></div>
+                                </div>
+                            </div>
+                            <!-- <div class="skill">
+                                <div class="name">PowerBI</div>
+                                <div class="value" style="left: 70%">70%</div>
+                                <div class="percent">
+                                    <div
+                                        class="progress"
+                                        style="width: 70%"
+                                    ></div>
+                                </div>
+                            </div> -->
+                            <!-- <div class="skill">
+                                <div class="name">MS Excel</div>
+                                <div class="value" style="left: 68%">68%</div>
+                                <div class="percent">
+                                    <div
+                                        class="progress"
+                                        style="width: 68%"
+                                    ></div>
+                                </div>
+                            </div>
+                            -->
+                            <!-- <div class="skill">
+                                <div class="name">SQL</div>
+                                <div class="value" style="left: 70%">70%</div>
+                                <div class="percent">
+                                    <div
+                                        class="progress"
+                                        style="width: 70%"
+                                    ></div>
+                                </div>
+                            </div> -->
+                            <!-- <div class="skill">
+                                <div class="name">PHP</div>
+                                <div class="value" style="left: 60%">40%</div>
+                                <div class="percent">
+                                    <div
+                                        class="progress"
+                                        style="width: 40%"
+                                    ></div>
+                                </div>
+                            </div> -->
+                            <!-- <div class="skill">
+                                <div class="name">Content Writing</div>
+                                <div class="value" style="left: 40%">70%</div>
+                                <div class="percent">
+                                    <div
+                                        class="progress"
+                                        style="width: 70%"
+                                    ></div>
+                                </div>
+                            </div> -->
+                            <div class="skill">
+                                <div class="name">Adobe Photoshop</div>
+                                <div class="value" style="left: 70%">70%</div>
+                                <div class="percent">
+                                    <div
+                                        class="progress"
+                                        style="width: 70%"
+                                    ></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <div class="name">Canva</div>
+                                <div class="value" style="left: 90%">90%</div>
+                                <div class="percent">
+                                    <div
+                                        class="progress"
+                                        style="width: 90%"
+                                    ></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <div class="name">Figma</div>
+                                <div class="value" style="left: 60%">60%</div>
+                                <div class="percent">
+                                    <div
+                                        class="progress"
+                                        style="width: 60%"
+                                    ></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <div class="name">Time Management</div>
+                                <div class="value" style="left: 80%">100%</div>
+                                <div class="percent">
+                                    <div
+                                        class="progress"
+                                        style="width: 100%"
+                                    ></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <div class="name">Quick Learner</div>
+                                <div class="value" style="left: 80%">100%</div>
+                                <div class="percent">
+                                    <div
+                                        class="progress"
+                                        style="width: 100%"
+                                    ></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <div class="name">Communication</div>
+                                <div class="value" style="left: 80%">100%</div>
+                                <div class="percent">
+                                    <div
+                                        class="progress"
+                                        style="width: 100%"
+                                    ></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <div class="name">Team Worker</div>
+                                <div class="value" style="left: 80%">100%</div>
+                                <div class="percent">
+                                    <div
+                                        class="progress"
+                                        style="width: 100%"
+                                    ></div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    
+                        <div class="experience">
+                            <div class="middle_line"></div>
+                             <div class="whitespace"></div>
+                            <div class="whitespace"></div>
+                            <div class="cover">
+                                <i class="job_box fas fa-briefcase"></i>
+                                <i class="date">Jul 2025 - Present</i>
+                                <h2>UI UX Developer</h2> </h2>
+                                <i class="name_company">LogicMojo</i>
+                                <article class="text_hidden" style="text-align: justify;">
+                                    Developed responsive web applications and improved UI/UX using HTML, CSS, JavaScript, and PHP. 
+                                    Contributed to content creation for digital platforms and leveraged AI tools to enhance workflow efficiency.
+                                </article>
+                            </div>
+                             <div class="whitespace"></div>
+                            <div class="whitespace"></div>
+                            <div class="cover">
+                                <i class="job_box fas fa-briefcase"></i>
+                                <i class="date">Apr 2025 - Jun 2025</i>
+                                <h2>Graphic Designer</h2> </h2>
+                                <i class="name_company">Polestarre</i>
+                                <article class="text_hidden" style="text-align: justify;">
+                                    Worked closely with content and marketing teams to develop engaging 
+                                    digital and print designs, maintaining brand consistency across campaigns. 
+                                    Leveraged Adobe Photoshop to create compelling visuals that enhanced audience 
+                                    engagement and brand presence.
+                                </article>
+                            </div>
+                            <div class="whitespace"></div>
+                            <div class="whitespace"></div>
+                            <div class="cover">
+                                <i class="job_box fas fa-briefcase"></i>
+                                <i class="date">Feb 2024 - Jun 2024</i>
+                                <h2>Data Analyst </h2>
+                                <i class="name_company">Mindful AI</i>
+                                <article class="text_hidden">
+                                    Analyzed datasets using regression models and machine learning algorithms;
+                                     enhanced predictive model accuracy by
+                                    25% and identified key factors contributing to customer churn,
+                                     increasing retention rate by 15%
+                                </article>
+                            </div>
+                            <div class="whitespace"></div>
+                            <div class="whitespace"></div>
+                            <div class="cover">
+                                <i class="job_box fas fa-briefcase"></i>
+                                <i class="date">May 2024 - Jun 2024</i>
+                                <h2>Data Analyst Intern</h2>
+                                <i class="name_company">Prime Solutions</i>
+                                <article class="text_hidden">
+                                    Analyzed datasets with SQL, Microsoft Excel, and Power BI, 
+                                    boosting data processing efficiency by 20%.
+                                    Developed and presented analytical reports 
+                                    that improved business decision-making by 25%
+                                </article>
+                            </div>
+                             <div class="whitespace"></div>
+                            <div class="whitespace"></div>
+                            <div class="cover">
+                                <i class="job_box fas fa-briefcase"></i>
+                                <i class="date">Jan 2024 - Feb 2024</i>
+                                <h2>Web Developer</h2>
+                                <i class="name_company">CodSoft</i>
+                                <article class="text_hidden">
+                                    Delivered high-quality websites and applications.
+                                    Optimized user experiences through effective design and functionality.
+
+                                </article>
+                            </div>
+                            <div class="whitespace"></div>
+                            <div class="whitespace"></div>
+                            <div class="cover">
+                                <i class="job_box fas fa-briefcase"></i>
+                                <i class="date">Feb 2023 - Mar 2023</i>
+                                <h2>Web Developemt</h2>
+                                <i class="name_company">Amypo Technologies</i>
+                                <article class="text_hidden" style="text-align:justify;">
+                                    Developed and maintained high-quality websites and applications.
+                                    Implemented responsive design frameworks to enhance user experience.
+                                    Collaborated with cross-functional teams to achieve project goals.
+                                </article>
+                            </div>
+                        </div>
+                        <div class="education">
+                            <div class="middle_line"></div>
+                            <div class="cover">
+                                <i class="job_box fas fa-briefcase"></i>
+                                <i class="date">Nov 2021 - Apr 2025</i>
+                                <h2>B.Tech IT </h2> </h2>
+                                <i class="name_company">SNS College of Technology, Coimbatore</i>
+                                <article class="text_hidden" style="text-align: justify;">
+                                I completed my Bachelor of Technology in Information Technology <b style="color: pink;"> with 9.55 CGPA</b>
+                                   from SNS College of Technology in April 2025. I consistently performed 
+                                   well academically and was recognized as a department rank holder, reflecting 
+                                   my dedication and commitment to excellence.
+                                </article>
+                            </div>
+                            
+                             
+                            <div class="cover">
+                                <i class="job_box fas fa-briefcase"></i>
+                                <i class="date">2020 - 2021</i>
+                                <h2>HSLC</h2> </h2>
+                                <i class="name_company">Hindhusthan Matriculation Higher Secondary School, Coimbatore</i>
+                                <article class="text_hidden" style="text-align: justify;">
+                                I completed my schooling with <b style="color: pink;">Percentage : 91</b> a focus on Computer Science
+                                    Throughout my academic career, I developed a strong foundation in computer science principles, 
+                                    which continues to inform my academic pursuits in higher education.
+                                </article>
+                            </div>
+                            
+                              
+                            <div class="cover">
+                                <i class="job_box fas fa-briefcase"></i>
+                                <i class="date">2018 - 2019</i>
+                                <h2>SSLC</h2> </h2>
+                                <i class="name_company">Hindhusthan Matriculation Higher Secondary School, Coimbatore</i>
+                                <article class="text_hidden" style="text-align: justify;">
+                                I completed my 10th grade education with <b style="color: pink;">percentage:87</b>. This foundational education 
+                                    provided me with a strong academic background and prepared 
+                                    me for further studies and future endeavors.
+                                </article>
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="layer layer3">
+                <div class="services main">
+                    
+                    <div class="hero">
+                        <span class="typography">
+                            <span class="t_dummy">SERVICE</span> <br />
+                            <span class="t-box">
+                                <span class="box-side box-front"
+                                    >be creative</span
+                                >
+                                <span class="box-side box-top"
+                                    >take risk</span
+                                >
+                                <span class="box-side box-back"
+                                    >be different</span
+                                >
+                                <span class="box-side box-bottom"
+                                    >be innovative</span
+                                >
+                            </span>
+                        </span>
+                        <p class="hero-text">
+                          Creative designer and developer focused on building visually appealing and user-centric digital experiences. Combining UI/UX design, frontend development, and content creation to deliver engaging, functional, and meaningful solutions.
+
+                        </p>
+                    </div>
+                    <br>
+                    <div class="capabilities left move-little-down">
+                        <img src="resources/img/elements/web.jpg"  alt="" />
+                        <p class="c_content" style="text-align: justify;">
+                            <span class="c_title">UI/UX Designer</span>
+                            My journey began with a passion for designing visually engaging and user-friendly interfaces. To bring my ideas to life, I expanded my skills into frontend development, allowing me to bridge the gap between design and implementation. With a strong focus on user experience, I create intuitive, responsive, and impactful digital solutions by combining design thinking, development, and creativity.
+
+                            <br />
+                            <a href="#">Learn More</a>
+                            <i class="far fa-arrow-alt-circle-right"></i>
+                        </p>
+                    </div>
+                <br>
+                    <div class="capabilities right">
+                        <p class="c_content" style="text-align: justify;">
+                            <span class="c_title">Graphic Designer</span>
+                            I create visually compelling designs that communicate ideas effectively and leave a lasting impression. From social media creatives to branding elements, I focus on maintaining visual consistency and creativity. My approach combines design aesthetics, content understanding, and attention to detail to deliver engaging and impactful visuals.
+
+                            <br />
+                            <a href="#">Learn More</a>
+                            <i class="far fa-arrow-alt-circle-right"></i>
+                        </p>
+                        <img
+                            src="resources/img/elements/graphics_bg.png"
+                            alt=""
+                        />
+                    </div>
+                    <div class="capabilities left move-little-down">
+                        <img
+                            src="resources/img/elements/seo_bg.jpg"
+                            alt=""
+                            style="
+                                background: #2929292f;
+                                backdrop-filter: blur(4px);
+                                border-radius: 10px;
+                            "
+                        />
+                        <p class="c_content" style="text-align: justify;">
+                            <span class="c_title">Content Creator</span>
+                            I craft clear, engaging, and meaningful content that enhances user experience and brand communication. From website content to social media captions, I focus on delivering messages that connect with the audience while aligning with design and overall strategy.
+
+                            <br />
+                            <a href="#">Learn More</a>
+                            <i class="far fa-arrow-alt-circle-right"></i>
+                        </p>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="layer layer4">
+                <div class="portfolio main">
+                    <div class="tip main">
+                        <div class="allContent">
+                            <div class="description" style="display: none">
+                                <div class="pro_intro">
+                                    <div class="nameplate">
+                                        <h1></h1>
+                                        <span
+                                            >
+                                            <span style="color: #999"
+                                                ></span
+                                            ></span
+                                        >
+                                    </div>
+                                    <div class="other_text">
+                                        <h2></h2>
+                                        <p
+                                            class="pro_brief"
+                                            style="
+                                                color: #999;
+                                                padding-left: 15px;
+                                            "
+                                        >
+                                           Click Here
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="pro_info">
+                                    <h2></h2>
+                                    <p class="Date">
+                                        <b></b>
+                                        <span style="color: #999"></span>
+                                    </p>
+                                    <p class="client">
+                                        <b></b>
+                                        <span style="color: #999"></span>
+                                    </p>
+                                    <p>
+                                        <b></b>
+                                        <span style="color: #999"
+                                            ></span
+                                        >
+                                    </p>
+                                    <p class="link">
+                                        <b></b>
+                                        <span style="color: #999"
+                                            ><a href="#"
+                                                ></a
+                                            ></span
+                                        >
+                                    </p>
+                                </div>
+                            </div>
+
+                            <button class="closeButton">
+                                <span>Project Details</span>
+                                <div class="icon"></div>
+                            </button>
+                            <button class="exitButton">&times;</button>
+
+                            <div class="port_content">
+                                <div class="swiper-container-2">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <img src="resources/img/portfolios/websites/1.jpg" alt="web design" />
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="resources/img/portfolios/websites/2.png" alt="web design" />
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="#" alt="web design" />
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="#" alt="web design" />
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="#" alt="web design" />
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="#" alt="web design" />
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="#" alt="web design" />
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="#" alt="web design" />
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="#" alt="web design" />
+                                        </div>
+                                    </div>
+                                
+                                    <div class="swiper-scrollbar"></div>
+                                    <div class="swiper-button-next"></div>
+                                    <div class="swiper-button-prev"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <nav class="about_nav padding_top">
+                        <ul>
+                            <li>
+                                <a
+                                    class="filter active"
+                                    href="#"
+                                    data-filter="all"
+                                    >All</a
+                                >
+                            </li>
+                            <li>
+                                <a class="filter" href="#" data-filter=".icon"
+                                    >Graphic Design</a
+                                >
+                            </li>
+                            <li>
+                                <a class="filter" href="#" data-filter=".web"
+                                    >FrontEnd Design</a
+                                >
+                            </li>
+                            <li>
+                                <a class="filter" href="#" data-filter=".logo"
+                                    ></a
+                                >
+                            </li>
+                            <li>
+                                <a class="filter" href="#" data-filter=".card"
+                                    >Websites</a
+                                >
+                            </li>
+
+                            
+                        </ul>
+                    </nav>
+                    <div class="mymixcont">
+                          <div class="mix icon">
+                            <img
+                                src="resources/img/portfolios/analysis/1.png"
+                                alt="Vote Analysis"
+                            />
+                            <span class="title">Photography Logo Design</span>
+                            <span class="port_link">View Project</span>
+                        </div>
+                        <div class="mix icon">
+                            <img
+                                src="resources/img/portfolios/analysis/2.png"
+                                alt="Sales Dashboard"
+                            />
+                            <span class="title">Floral Enhancement</span>
+                            <span class="port_link">View Project</span>
+                        </div>
+                        <div class="mix web">
+                            <img
+                                src="resources/img/portfolios/websites/1.jpg"
+                                alt="Event Management"
+                            />
+                            <span class="title">Event Management</span>
+                            <span class="port_link">View Project</span>
+                        </div>
+                          <div class="mix card">
+                            <img
+                                src="resources/img/portfolios/websites/11.png"
+                                alt="Tic Tac Toe"
+                            />
+                            <span class="title">Tic Tac Toe</span>
+                            <span class="port_link">View Project</span>
+                        </div>
+                         <div class="mix icon">
+                            <img
+                                src="resources/img/portfolios/analysis/3.png"
+                                alt="Sales Dashboard"
+                            />
+                            <span class="title">T-shirt Design</span>
+                            <span class="port_link">View Project</span>
+                        </div>
+                         <div class="mix icon">
+                            <img
+                                src="resources/img/portfolios/analysis/4.png"
+                                alt="Sales Dashboard"
+                            />
+                            <span class="title">Logo Design</span>
+                            <span class="port_link">View Project</span>
+                        </div>
+                         <div class="mix icon">
+                            <img
+                                src="resources/img/portfolios/analysis/5.png"
+                                alt="Sales Dashboard"
+                            />
+                            <span class="title">Logo Design</span>
+                            <span class="port_link">View Project</span>
+                        </div>
+                        <div class="mix icon">
+                            <img
+                                src="resources/img/portfolios/analysis/6.png"
+                                alt="Stock Market Analysis"
+                            />
+                            <span class="title">Photo Enhancement</span>
+                            <span class="port_link">View Project</span>
+                        </div>
+                        
+                        <div class="mix web">
+                            <img
+                                src="resources/img/portfolios/websites/8.jpg"
+                                alt="EMC"
+
+                            />
+                            <span class="title">EMC</span>
+                            <span class="port_link">View Project</span>
+                        </div>
+                        <div class="mix card">
+                            <img
+                                src="resources/img/portfolios/websites/10.jpg"
+                                alt="E-Commerce Website"
+                            />
+                            <span class="title">E-Commerce Website</span>
+                            <span class="port_link">View Project</span>
+                        </div>
+                        <div class="mix web">
+                            <img
+                                src="resources/img/portfolios/websites/2.png"
+                                alt="Image Gallary"
+                            />
+                            <span class="title">Image Gallary</span>
+                            <span class="port_link">View Project</span>
+                        </div>
+                        <div class="mix web">
+                            <img
+                                src="resources/img/portfolios/websites/5.png"
+                                alt="Tribute Page"
+                            />
+                            <span class="title">Tribute Page</span>
+                            <span class="port_link">View Project</span>
+                        </div>
+                      
+                        <div class="mix card">
+                            <img
+                                src="resources/img/portfolios/websites/3.jpg"
+                                alt="Higher Educational Portal"
+                            />
+                            <span class="title">Higher Education Portal</span>
+                            <span class="port_link">View Project</span>
+                        </div>
+                        <div class="mix web">
+                            <img
+                                src="resources/img/portfolios/websites/12.png"
+                                alt="Book Store"
+                            />
+                            <span class="title">Book Store</span>
+                            <span class="port_link">View Project</span>
+                        </div>
+                        <div class="mix card">
+                            <img
+                                src="resources/img/portfolios/websites/4.png"
+                                alt="User Management System"
+                            />
+                            <span class="title">User Management System</span>
+                            <span class="port_link">View Project</span>
+                        </div>
+                        <div class="mix card">
+                            <img
+                                src="resources/img/portfolios/websites/13.png"
+                                alt="Calculator Using React"
+                            />
+                            <span class="title">Calculator Using React</span>
+                            <span class="port_link">View Project</span>
+                        </div>
+                        <div class="mix web">
+                            <img
+                                src="resources/img/portfolios/websites/7.png"
+                                alt="Isaipolivu"
+                            />
+                            <span class="title">Isaipolivu</span>
+                            <span class="port_link">View Project</span>
+                        </div>
+                        <div class="mix card">
+                            <img
+                                src="resources/img/portfolios/websites/9.png"
+                                alt="TODO-API"
+                            />
+                            <span class="title">TODO-API</span>
+                            <span class="port_link">View Project</span>
+                        </div>
+                        <div class="mix card">
+                            <img
+                                src="resources/img/portfolios/websites/6.png"
+                                alt="Infinity Cafe"
+                            />
+                            <span class="title">Infinity Cafe</span>
+                            <span class="port_link">View Project</span>
+                        </div>
+                      
+                    </div>
+                </div>
+            </div>
+            <div class="layer layer5">
+                <div class="testimonial">
+                    <h1>
+                        <span>Certifications</span>
+                    </h1>
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="resources/img/certifications/1.jpg" alt="" />
+                                <h4>Angu Ishwarya S</h4>
+                                <div class="rating">
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                </div>
+                                <p>
+                                    <span style="font-size:15px;"><b>EnterPrise Design Thinking Parctitioner</b></span><br><br>
+                                    <b>Issued on :</b> 11 MAR 2022 <br>
+                                    <b>Issued by :</b> IBM
+                                </p>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="resources/img/certifications/2.jpg" alt="" />
+                                <h4>Angu Ishwarya S</h4>
+                                <div class="rating">
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                </div>
+                                <p>
+                                    <span style="font-size:15px;"><b>Python</b></span><br><br>
+                                    <b>Issued on :</b> 10 MAR 2024 <br>
+                                    <b>Issued by :</b> PREPINSTA
+                                </p>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="resources/img/certifications/3.jpg" alt="" />
+                                <h4>Angu Ishwarya S</h4>
+                                <div class="rating">
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                </div>
+                                <p>
+                                    <span style="font-size:15px;"><b>Quizon basics on CS</b></span><br><br>
+                                    <b>Issued on :</b> 13 DEC 2022 <br>
+                                   <b> Issued by :</b> SAHRDAYA COLLEGE OF TECHNOLOGY
+                                </p>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="resources/img/certifications/4.jpg" alt="" />
+                                <h4>Angu Ishwarya S</h4>
+                                <div class="rating">
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                </div>
+                                <p>
+                                    <span style="font-size:15px;"><b>Top Excel Tips</b></span><br><br>
+                                    <b>Issued on :</b> 17 JUN 2023 <br>
+                                    <b>Issued by :</b> EXCEL CHAMPS
+                                </p>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="resources/img/certifications/5.jpg" alt="" />
+                                <h4>Angu Ishwarya S</h4>
+                                <div class="rating">
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                </div>
+                                <p>
+                                    <span style="font-size:15px;"><b>SQL And Relational Database</b></span><br><br>
+                                    <b>Issued on :</b> 18 MAY 2024 <br>
+                                   <b> Issued by :</b> IBM
+                                </p>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="resources/img/certifications/6.jpg" alt="" />
+                                <h4>Angu Ishwarya S</h4>
+                                <div class="rating">
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                </div>
+                                <p>
+                                    <span style="font-size:15px;"><b>HR Workshop</b></span><br><br>
+                                    <b>Issued on :</b> 08 FEB 2024 <br>
+                                    <b>Issued by :</b> TAREEQA GLOBAL SOLUTION PVT.LTD
+                                </p>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="resources/img/certifications/7.jpg" alt="" />
+                                <h4>Angu Ishwarya S</h4>
+                                <div class="rating">
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                </div>
+                                <p>
+                                    <span style="font-size:15px;"><b>GIT</b></span><br><br>
+                                   <b> Issued on :</b> 06 FEB 2024 <br>
+                                    <b>Issued by :</b> PREPINSTA
+                                </p>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="resources/img/certifications/8.png" alt="" />
+                                <h4>Angu Ishwarya S</h4>
+                                <div class="rating">
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                </div>
+                                <p>
+                                    <span style="font-size:15px;"><b>Python Django FrameWork</b></span><br><br>
+                                    <b>Issued on : </b>09 FEB 2024 <br>
+                                   <b> Issued by : </b>UDEMY
+                                </p>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="resources/img/certifications/9.jpg" alt="" />
+                                <h4>Angu Ishwarya S</h4>
+                                <div class="rating">
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                </div>
+                                <p>
+                                    <span style="font-size:15px;"><b>REACT JS For Beginners</b></span><br><br>
+                                    <b>Issued on : </b>10 APR 2024 <br>
+                                    <b>Issued by :</b> SIMPLILEARN
+                                </p>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="resources/img/certifications/10.jpg" alt="" />
+                                <h4>Angu Ishwarya S</h4>
+                                <div class="rating">
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                </div>
+                                <p>
+                                    <span style="font-size:15px;"><b>Introduction To Carrer Skills In Data Analytics</b></span><br><br>
+                                    <b>Issued on :</b> 19 JUN 2024 <br>
+                                   <b> Issued by :</b> LINKEDIN
+                                </p>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="resources/img/certifications/11.jpg" alt="" />
+                                <h4>Angu Ishwarya S</h4>
+                                <div class="rating">
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                </div>
+                                <p>
+                                    <span style="font-size:15px;"><b>WEB Development Internship</b></span><br><br>
+                                   <b> Issued on :</b> 05 MAY 2024 - 05 JUN 2024 <br>
+                                    <b>Issued by :</b> CODSOFT
+                                </p>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="resources/img/certifications/12.jpg" alt="" />
+                                <h4>Angu Ishwarya S</h4>
+                                <div class="rating">
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                </div>
+                                <p>
+                                    <span style="font-size:15px;"><b>Introduction To Industry 4.0 And Industrial IOT</b></span><br><br>
+                                    <b>Issued on : </b> JAN - APR 2024 <br>
+                                   <b> Issued by : </b> NPTEL
+                                </p>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="resources/img/certifications/13.jpg" alt="" />
+                                <h4>Angu Ishwarya S</h4>
+                                <div class="rating">
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                </div>
+                                <p>
+                                    <span style="font-size:15px;"><b>Microsoft Copilot</b></span><br><br>
+                                    <b>Issued on :</b> 02 JUL 2024 <br>
+                                    <b>Issued by :</b> MICROSOFT
+                                </p>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="layer layer6">
+                <div class="contact_us">
+                    <div id="map"></div>
+                    <address class="info_container">
+                        
+                        <div class="info info1">
+                            <i class="fas fa-home"></i>
+                            <span class="iname">Address</span>
+                            <a
+                                href="https://www.google.com/maps/place/Sherpur+Town+Hall/@25.0136644,90.0140045,355m/data=!3m1!1e3!4m5!3m4!1s0x3757d6136d793499:0x8c22620664dc6a37!8m2!3d25.0156371!4d90.0168872"
+                            >
+                                <h3></h3>
+                                <span></span><br />
+                                <span>Coimbatore, India </span>
+                            </a>
+                        </div>
+                        <div class="info info2">
+                            <i class="fas fa-envelope"></i>
+                            <span class="iname">Email</span>
+                            <a href="mailto:ishwaryax7@gmail.com"
+                                >ishwaryax7@gmail.com</a
+                            >
+                            
+                        </div>
+                        <div class="info info3">
+                            <i class="fab fa-linkedin-in"></i>
+                            <span class="iname">LinkedIn</span>
+                            <a
+                                href="https://www.linkedin.com/in/anguishwarya/"
+                            >
+                                <h3></h3>
+                                <span></span><br />
+                                <span>Link </span>
+                            </a>
+                        </div>
+                    </address>
+
+                    <form action="#" method="post">
+                        <h1>Get In Touch</h1>
+                        <div class="inp_field">
+                            <i class="fas fa-user"></i>
+                            <input
+                                type="text"
+                                name="name"
+                                class="fname"
+                                id="fname"
+                                placeholder="Full Name"
+                                required
+                            />
+                        </div>
+                        <div class="inp_field">
+                            <i class="fas fa-envelope"></i>
+                            <input
+                                type="email"
+                                name="email"
+                                class="email"
+                                id="email"
+                                placeholder="Email"
+                                required
+                            />
+                        </div>
+                        <div class="inp_field">
+                            <i class="fas fa-angle-double-right"></i>
+                            <input
+                                type="text"
+                                name="subject"
+                                class="subject"
+                                id="subject"
+                                placeholder="Subject"
+                                required
+                            />
+                        </div>
+                        <textarea
+                            name="message"
+                            cols="30"
+                            rows="5"
+                            class="message"
+                            id="message"
+                            placeholder="Message"
+                            required
+                        ></textarea>
+                        <button class="submit" id="submit"><a href="mailto:ishwaryax7@gmail.com">Submit</a></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        
+        <script src="resources/js/jquery.min.js"></script>
+        <script src="resources/js/mixitup.min.js"></script>
+        <script src="resources/swiper js/swiper-bundle.min.js"></script>
+        <script src="resources/mapbox-gl/mapbox-gl.js"></script>
+        <script src="resources/js/email.min.js"></script>
+        <script type="text/javascript">
+            (function () {
+                emailjs.init("user_5OMETIDQ2Nm9qBMtaFNz4");
+            })();
+        </script>
+        <script src="resources/js/vanilla-tilt.min.js"></script>
+        <script src="resources/js/anime.min.js"></script>
+        <script src="resources/js/home.js"></script>
+        <script src="resources/js/about.js"></script>
+        <script src="resources/js/services.js"></script>
+        <script src="resources/js/portfolio.js"></script>
+        <script src="resources/js/blog.js"></script>
+        <script src="resources/js/contact.js"></script>
+        <script src="resources/js/main.js"></script>
+        <script>
+            const animate1 = anime.timeline({
+                targets: ".circle",
+                loop: true,
+                duration: 1000,
+                direction: "alternate",
+                easing: "easeInOutQuad",
+            });
+            animate1.add({
+                translateX: 350,
+            });
+
+            let dot = document.querySelectorAll(".dot");
+            for (let i = 0; i < dot.length; i++) {
+                const ind = dot[i];
+                const animate2 = anime.timeline({
+                    targets: ind,
+                    loop: true,
+                    direction: "alternate",
+                    delay: i * 100,
+                });
+                animate2.add({
+                    scale: 2,
+                });
+            }
+
+            let span = document.querySelectorAll(".content .text span");
+            const animate3 = anime.timeline({
+                targets: span,
+                easing: "easeInOutExpo",
+                delay: anime.stagger(20, { direction: "reverse" }),
+                direction: "reverse",
+                autoplay: false,
+            });
+
+            animate3.add({
+                rotate: () => {
+                    return anime.random(-360, 360);
+                },
+                translateX: () => {
+                    return anime.random(-500, 500);
+                },
+                translateY: () => {
+                    return anime.random(-500, 500);
+                },
+                duration: 3000,
+            });
+
+            const animate4 = anime({
+                targets: ".button",
+                scale: [0, 1],
+                delay: anime.stagger(200, { start: 7000 }),
+                autoplay: false,
+            });
+
+            const animate5 = anime({
+                targets: [
+                    document.querySelectorAll(".info"),
+                    document.querySelectorAll(".inp_field"),
+                    ".message",
+                    ".submit",
+                ],
+                translateY: [50, 0],
+                rotateX: [90, 0],
+                opacity: [0, 1],
+                delay: anime.stagger(300, { start: 1000 }),
+                duration: 750,
+                autoplay: false,
+                easing: "easeOutQuint",
+            });
+            
+            const animate6 = anime({
+                targets: ['.services .t_dummy', '.services .hero-text'],
+                duration: 1000,
+                scaleX: [0, 1],
+                delay: anime.stagger(300, {start: 1000}),
+                autoplay: false,
+            });
+
+            function resize() {
+                if (window.innerWidth <= 632) {
+                    animate5.play();
+                    animate3.play();
+                    animate4.play();
+                    animate6.play();
+                }
+            }
+            resize();
+            window.addEventListener("resize", resize);
+        </script>
+    </body>
+</html>
